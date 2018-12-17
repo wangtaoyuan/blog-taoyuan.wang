@@ -22,10 +22,10 @@ def homepage(request):
     return HttpResponse(html)
 
 
-def showpost(request, slug):
+def showpost(request, author):
     template = get_template('post.html')
     try:
-        post = Post.objects.get(slug=slug)
+        post = Post.objects.get(author=author)
         if post != None:
             html = template.render(locals())
             return HttpResponse(html)
