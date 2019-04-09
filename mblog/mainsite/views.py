@@ -31,3 +31,7 @@ def showpost(request, author):
             return HttpResponse(html)
     except:
         return redirect('/') #直接返回首页
+
+
+def profile(request):
+    return render(request, "profile.html")
