@@ -15,7 +15,7 @@ def homepage(request):
     #     post_lists.append("No.{}:".format(str(count)) + str(post) + "<br>")
     #     post_lists.append("<small>" + str(post.body) + "</small><br><br>")
 
-    template = get_template('index.html')
+    template = get_template('first.html')
     posts = Post.objects.all()
     now = datetime.now()
     html = template.render(locals())
