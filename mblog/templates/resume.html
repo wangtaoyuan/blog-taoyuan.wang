@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>王涛渊的简历</title>
+</head>
+<body>
+<!--<a href="{% static 'pdf/resume.pdf' %}" target="_blank">PDF</a>-->
+<div id="pdf">
+<!--    <script src="{% static '/js/pdfobject/pdfobject.js'%}"></script>-->
+    <style>
+    #resume_pdf.pdfobject-container { height: 300rem; border: 1rem solid rgba(0,0,0,.1); }
+    </style>
+    <div id="resume_pdf" class="pdfobject-container">
+          <embed class="pdfobject" src="{% static 'pdf/resume.pdf' %}#page=1" style="overflow:auto" width="100%" height="23%">
+    </div>
+</div>
+</body>
+</html>

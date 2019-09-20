@@ -35,3 +35,7 @@ def showpost(request, author):
 
 def profile(request):
     return render(request, "profile.html")
+
+
+def resume(request):
+    return render(request, "resume.html")
